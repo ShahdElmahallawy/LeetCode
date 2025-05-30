@@ -1,20 +1,18 @@
 class Solution {
 public:
     void reverseString(vector<char>& s) {
-        int i =0;
-        int j = s.size() - 1;
-        while(i < j)
+        int l =0;
+        int n = s.size();
+        int r = n-1;
+        while(l<r)
         {
-            char temp = s[i];
-            s[i] = s[j];
-            s[j] = temp;
-            i++;
-            j--;
+            char x = s[r];
+            s[r] = s[l];
+            s[l] = x;
+            l++;
+            r--;
         }
-        for (auto &c : s)
-        {
-            cout<<c;
-        }
-        
+        for(auto& x: s)
+            cout<< x;
     }
 };
