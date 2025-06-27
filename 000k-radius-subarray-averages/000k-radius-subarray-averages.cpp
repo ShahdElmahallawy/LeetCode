@@ -13,9 +13,9 @@ public:
         {
             return nums;
         }
-        for(int i=k; i<n-k; i++)
+        for(int i=k; i < n-k; i++)
         {
-            ans[i] = (pref[i+k+1] - pref [i-k]) / (2*k + 1);
+            ans[i] = (pref[i+k+1] - pref[i-k])/ (k*2 + 1);
         }
         return ans;
     }
